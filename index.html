@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Artur Bomtempo">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <!-- === Favicon === -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <!-- === CSS File === -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- === Fonts === -->
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="models">
+        <!-- === Pizza Area === -->
+        <div class="pizza-item">
+            <a href="#">
+                <div class="pizza-item-img"> <img src=""> </div>
+                <div class="pizza-item-add">&#43;</div>
+            </a>
+            <div class="pizza-item-price">R&#36; --</div>
+            <div class="pizza-item-name">--</div>
+            <div class="pizza-item-desc">--</div>
+        </div>
+        <!-- === Cart Items === -->
+        <div class="cart-item">
+            <img src="">
+            <div class="cart-item-name">--</div>
+            <div class="cart-item-qtarea">
+                <button class="cart-item-qtless">&#45;</button>
+                <div class="cart-item-qt">1</div>
+                <button class="cart-item-qtmore">&#43;</button>
+            </div>
+        </div>
+    </div>
+    <!-- === Mobile Header === -->
+    <header>
+        <div id="menu-opener"><span>0</span>🛒</div>
+    </header>
+    <!-- === Pizza Section === -->
+    <main>
+        <h1>Pizzas</h1>
+        <div id="pizza-area"></div>
+    </main>
+    <!-- === Customer Request === -->
+    <aside>
+        <div id="cart-area">
+            <div id="close-menu-mobile">❌</div>
+            <h1>Suas pizzas</h1>
+            <div id="cart"></div>
+            <div id="cart-details">
+                <div class="cart-totalitem" id="subtotal">
+                    <span>Subtotal</span>
+                    <span>R&#36; --</span>
+                </div>
+                <div class="cart-totalitem" id="discount">
+                    <span>Desconto (-10%)</span>
+                    <span>R&#36; --</span>
+                </div>
+                <div class="cart-totalitem total" id="big">
+                    <span>Total</span>
+                    <span>R&#36; --</span>
+                </div>
+                <div id="cart-finish">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <!-- === Modal === -->
+    <div id="modal-area">
+        <div id="modal-body">
+            <div id="back-button">Voltar</div>
+            <div id="pizza-big">
+                <img src="">
+            </div>
+            <div id="pizza-info">
+                <h1>--</h1>
+                <div id="pizza-info-desc">--</div>
+                <div id="pizza-info-sizearea">
+                    <div class="pizza-info-sector">Tamanho</div>
+                    <div id="pizza-info-sizes">
+                        <div data-key="0" class="pizza-info-size">PEQUENA <span>--</span></div>
+                        <div data-key="1" class="pizza-info-size">MÉDIA <span>--</span></div>
+                        <div data-key="2" class="pizza-info-size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div id="pizza-info-pricearea">
+                    <div class="pizza-info-sector">Preço</div>
+                    <div id="pizza-info-price">
+                        <div id="pizza-info-actualprice">R&#36; --</div>
+                        <div id="pizza-info-qtarea">
+                            <button id="pizza-info-qtless">&#45;</button>
+                            <div id="pizza-info-qt">1</div>
+                            <button id="pizza-info-qtmore">&#43;</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="pizza-info-add">Adicionar ao carrinho</div>
+                <div id="pizza-info-cancel">Cancelar</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === JS Files === -->
+    <script src="./assets/js/pizzas.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

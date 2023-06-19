@@ -1,4 +1,3 @@
-// Armazenar os sabores das pizzas
 let pizzas = [
     {id: 1, name: 'Calabresa', img: 'assets/images/pizza1.png', price: 30.90, sizes: ['320g', '530g', '860'], description: 'Queijo, calabresa, cebola, azeitona preta e oregano.'},
     {id: 2, name: 'Portuguesa', img: 'assets/images/pizza2.png', price: 32.90, sizes: ['320g', '530g', '860g'], description: 'Queijo, presunto, ovo de codorna, azeitona preta, cebola, oregano e pimentão verde.'},

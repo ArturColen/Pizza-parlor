@@ -1,13 +1,10 @@
-// Initial data
 let modalQt = 1;
 let cart = [];
 let modalKey = 0;
 
-// Simplify the process
 const c = (element) => document.querySelector(element);
 const cs = (element) => document.querySelectorAll(element);
 
-// Show the data of each pizza and the modal
 pizzas.map((item, index) => {
     let pizzaItem = c('#models .pizza-item').cloneNode(true);
 
@@ -47,7 +44,6 @@ pizzas.map((item, index) => {
     c('#pizza-area').append(pizzaItem);
 });
 
-// Effect when closing the modal
 function closeModal() {
     c('#modal-area').style.opacity = 0;
     setTimeout(() => {
@@ -55,7 +51,6 @@ function closeModal() {
     }, 500);
 }
 
-// Configure the functionality of modal close and add/remove item from cart
 cs('#pizza-info-cancel, #back-button').forEach((item) => {
     item.addEventListener('click', closeModal);
 });
@@ -72,7 +67,6 @@ c('#pizza-info-qtmore').addEventListener('click', () => {
     c('#pizza-info-qt').innerHTML = modalQt;
 });
 
-// Choose the pizza size
 cs('.pizza-info-size').forEach((size, sizeIndex) => {
     size.addEventListener('click', (e) => {
         c('.pizza-info-size.selected').classList.remove('selected');
@@ -80,7 +74,6 @@ cs('.pizza-info-size').forEach((size, sizeIndex) => {
     });
 });
 
-// Display the menu with the chosen products
 c('#pizza-info-add').addEventListener('click', () => {
     let size = parseInt(c('.pizza-info-size.selected').getAttribute('data-key'));
     let identifier = pizzas[modalKey].id + '@' + size;
@@ -102,7 +95,6 @@ c('#pizza-info-add').addEventListener('click', () => {
     closeModal();
 });
 
-// Update the order data while the products are being chosen
 function updateCart() {
     c('#menu-opener span').innerHTML = cart.length;
 
@@ -169,7 +161,6 @@ function updateCart() {
     }
 }
 
-// Open and close customer request on mobile
 c('#menu-opener').addEventListener('click', () => {
     if (cart.length > 0) {
         c('aside').style.left = '0';
@@ -180,7 +171,6 @@ c('#close-menu-mobile').addEventListener('click', () => {
     c('aside').style.left = '100vw';
 });
 
-// Warning after placing order
 c('#cart-finish').addEventListener('click', () => {
     alert('Seu pedido está sendo realizado e será entregue em breve.');
 });
